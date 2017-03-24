@@ -31,9 +31,11 @@
 # Debug files
 *.dSYM/
 *.su
+.tag*
 
 ifTest
 unsig
 mkdirCmd
 funPoint
 BigLittEndian
+ifJudgement

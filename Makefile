@@ -5,7 +5,7 @@ LDFLAGS			:= -lm -lpthread
 CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
-TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest
+TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement
 
 all:$(TARGET)
 
@@ -41,6 +41,11 @@ ifTestOBJS = \
 ifTest:$(ifTestOBJS)
 	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
+ifJudgementOBJS = \
+	ifJudgement.o
+
+ifJudgement:$(ifJudgementOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 %.o:%.c
 	$(CC) -c -O3 -o $@ $< $(CFLAGS)
@@ -57,6 +62,6 @@ help:
 	@echo mkdirCmd       : 创建文件夹的示例
 	@echo unsig          : 无符号数溢出的测试
 	@echo ifTest         : if的整数真假值测试
-
+	@echo ifJudgement    : if中,赋值后再判断的示例
 clean:
 	@rm -rf *.o $(TARGET)
