@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+
+ifTest
+unsig
+mkdirCmd
+funPoint
+BigLittEndian
