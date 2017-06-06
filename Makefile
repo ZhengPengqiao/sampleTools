@@ -5,7 +5,8 @@ LDFLAGS			:= -lm -lpthread
 CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
-TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement
+TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
+				rmdirCmd mountCmd
 
 all:$(TARGET)
 
@@ -47,6 +48,18 @@ ifJudgementOBJS = \
 ifJudgement:$(ifJudgementOBJS)
 	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
+rmdirCmdOBJS = \
+	rmdirCmd.o
+
+rmdirCmd:$(rmdirCmdOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+mountCmdOBJS = \
+	mountCmd.o
+
+mountCmd:$(mountCmdOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
 %.o:%.c
 	$(CC) -c -O3 -o $@ $< $(CFLAGS)
 
@@ -60,8 +73,10 @@ help:
 	@echo BigLittEndian  : 判断程序大小端字节序
 	@echo funPoint       : 函数指针的示例
 	@echo mkdirCmd       : 创建文件夹的示例
+	@echo rmdirCmd       : 删除文件夹的示例
 	@echo unsig          : 无符号数溢出的测试
 	@echo ifTest         : if的整数真假值测试
 	@echo ifJudgement    : if中,赋值后再判断的示例
+
 clean:
 	@rm -rf *.o $(TARGET)
