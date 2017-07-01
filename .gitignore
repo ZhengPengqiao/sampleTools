@@ -41,3 +41,4 @@ BigLittEndian
 ifJudgement
 rmdirCmd
 mod
+showProgress
