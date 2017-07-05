@@ -6,9 +6,14 @@ CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
-				rmdirCmd mountCmd mod
+				rmdirCmd mountCmd mod ANSICtrl
 
 all:$(TARGET)
+
+ANSICtrlOBJS = \
+	ANSICtrl.o
+ANSICtrl:$(ANSICtrlOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 BigLittEndianOBJS = \
 	BigLittEndian.o
