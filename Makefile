@@ -6,7 +6,7 @@ CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
-				rmdirCmd mountCmd mod ANSICtrl
+				rmdirCmd mountCmd mod ANSICtrl showProgress
 
 all:$(TARGET)
 
@@ -61,6 +61,11 @@ modOBJS = \
 mod:$(modOBJS)
 	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
+
+showProgressOBJS = \
+	showProgress.o
+showProgress:$(showProgressOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 %.o:%.c
 	$(CC) -c -O3 -o $@ $< $(CFLAGS)

@@ -42,3 +42,4 @@ ifJudgement
 rmdirCmd
 mod
 ANSICtrl
+showProgress
