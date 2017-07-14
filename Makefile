@@ -6,9 +6,14 @@ CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
-				rmdirCmd mountCmd mod ANSICtrl showProgress
+				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime
 
 all:$(TARGET)
+
+mktime_localtimeOBJS = \
+	mktime_localtime.o
+ANSICtrl:$(mktime_localtimeOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 ANSICtrlOBJS = \
 	ANSICtrl.o
