@@ -23,11 +23,8 @@ int main ()
    else
    {
       strftime(buffer, sizeof(buffer), "%c", &info );
-      printf("%s   %d\n",buffer,  ret);
+      printf("%s   %d\n",buffer,  (int)ret);
    }
-
-
-
 
    struct tm *tm_info;
    time_t rawtime = ret;

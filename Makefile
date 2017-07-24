@@ -6,13 +6,27 @@ CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
-				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime
+				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
+				copyFile chmod
 
 all:$(TARGET)
 
+
+chmodOBJS = \
+	chmod.o
+chmod:$(chmodOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+
+copyFileOBJS = \
+	copyFile.o
+copyFile:$(copyFileOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+
 mktime_localtimeOBJS = \
 	mktime_localtime.o
-ANSICtrl:$(mktime_localtimeOBJS)
+mktime_localtime:$(mktime_localtimeOBJS)
 	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 ANSICtrlOBJS = \
