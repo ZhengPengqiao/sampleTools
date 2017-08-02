@@ -7,9 +7,22 @@ LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
 				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
-				copyFile chmod
+				copyFile chmod systemCmd popenFun
 
 all:$(TARGET)
+
+
+popenFunOBJS = \
+	popenFun.o
+popenFun:$(popenFunOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+
+systemCmdOBJS = \
+	systemCmd.o
+systemCmd:$(systemCmdOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
 
 
 chmodOBJS = \
