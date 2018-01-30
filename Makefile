@@ -2,111 +2,39 @@
 CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread 
 
-CFLAGS	+=
-LDFLAGS	+=
-LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
 				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram
 
 all:$(TARGET)
 
-checkProgramOBJS = \
-	checkProgram.o
-checkProgram:$(checkProgramOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+checkProgram:checkProgram.o
+fock:fock.o
+popenFun:popenFun.o
+systemCmd:systemCmd.o
+chmod:chmod.o
+copyFile:copyFile.o
+mktime_localtime:mktime_localtime.o
+ANSICtrl:ANSICtrl.o
+BigLittEndian:BigLittEndian.o
+funPoint:funPoint.o
+mkdirCmd:mkdirCmd.o
+unsig:unsig.o
+ifTest:ifTest.o
+ifJudgement:ifJudgement.o
+rmdirCmd:rmdirCmd.o
+mountCmd:mountCmd.o
+mod:mod.o
+showProgress:showProgress.o
 
-fockOBJS = \
-	fock.o
-fock:$(fockOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+.PHONY:backtrace_complite
+backtrace_complite:
+	make -C ./backtrace
 
-popenFunOBJS = \
-	popenFun.o
-popenFun:$(popenFunOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+.PHONY:backtrace_clean
+backtrace_clean:
+	make -C ./backtrace clean
 
-
-systemCmdOBJS = \
-	systemCmd.o
-systemCmd:$(systemCmdOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-
-
-chmodOBJS = \
-	chmod.o
-chmod:$(chmodOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-
-copyFileOBJS = \
-	copyFile.o
-copyFile:$(copyFileOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-
-mktime_localtimeOBJS = \
-	mktime_localtime.o
-mktime_localtime:$(mktime_localtimeOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-ANSICtrlOBJS = \
-	ANSICtrl.o
-ANSICtrl:$(ANSICtrlOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-BigLittEndianOBJS = \
-	BigLittEndian.o
-BigLittEndian:$(BigLittEndianOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-funPointOBJS = \
-	funPoint.o
-funPoint:$(funPointOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-mkdirCmdOBJS = \
-	mkdirCmd.o
-mkdirCmd:$(mkdirCmdOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-unsigOBJS = \
-	unsig.o
-unsig:$(unsigOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-
-ifTestOBJS = \
-	ifTest.o
-ifTest:$(ifTestOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-ifJudgementOBJS = \
-	ifJudgement.o
-ifJudgement:$(ifJudgementOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-rmdirCmdOBJS = \
-	rmdirCmd.o
-rmdirCmd:$(rmdirCmdOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-mountCmdOBJS = \
-	mountCmd.o
-mountCmd:$(mountCmdOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-modOBJS = \
-	mod.o
-mod:$(modOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
-
-
-showProgressOBJS = \
-	showProgress.o
-showProgress:$(showProgressOBJS)
-	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 %.o:%.c
 	$(CC) -c -O3 -o $@ $< $(CFLAGS)
