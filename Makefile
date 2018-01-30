@@ -7,10 +7,19 @@ LDFLAGS	+=
 LDFLAGS	+=
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
 				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
-				copyFile chmod systemCmd popenFun
+				copyFile chmod systemCmd popenFun checkProgram
 
 all:$(TARGET)
 
+checkProgramOBJS = \
+	checkProgram.o
+checkProgram:$(checkProgramOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+fockOBJS = \
+	fock.o
+fock:$(fockOBJS)
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 popenFunOBJS = \
 	popenFun.o
@@ -117,6 +126,9 @@ help:
 	@echo ifTest         : if的整数真假值测试
 	@echo ifJudgement    : if中,赋值后再判断的示例
 	@echo mod            : 正数负数取模之后的结果
+	@echo fock			 : c语言创建进程
+	@echo checkProgram   : c语言检查指定程序是否在运行 
+
 
 clean:
 	@rm -rf *.o $(TARGET)
