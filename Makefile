@@ -42,6 +42,16 @@ backtrace_clean:
 	make -C ./backtrace clean
 #<<<<<<<<<< backtrace
 
+#>>>>>>>>>> checkParam
+.PHONY:checkParam_complite
+checkParam_complite:
+	make -C ./checkParam
+
+.PHONY:checkParam_clean
+checkParam_clean:
+	make -C ./checkParam clean
+#<<<<<<<<<< checkParam
+
 #>>>>>>>>>>  changePriority
 .PHONY:changePriority_complite
 changePriority_complite:
