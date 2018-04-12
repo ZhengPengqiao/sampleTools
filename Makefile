@@ -52,6 +52,16 @@ checkParam_clean:
 	make -C ./checkParam clean
 #<<<<<<<<<< checkParam
 
+#>>>>>>>>>>  yuyvtorgb565
+.PHONY:yuyvtorgb565_complite
+yuyvtorgb565_complite:
+	make -C ./yuyvtorgb565
+
+.PHONY:yuyvtorgb565_clean
+yuyvtorgb565_clean:
+	make -C ./yuyvtorgb565 clean
+#<<<<<<<<<<  yuyvtorgb565
+
 #>>>>>>>>>>  changePriority
 .PHONY:changePriority_complite
 changePriority_complite:
