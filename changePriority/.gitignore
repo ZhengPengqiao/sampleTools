@@ -15,6 +15,7 @@
 *.exe
 *.out
 *.app
-makeuyvy
-out
-tmp.nv12
+changePriority
+changeThreadPriority
+pthreads_sched_test
+pthreadAttrPriority
