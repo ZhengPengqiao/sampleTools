@@ -85,7 +85,7 @@ include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := pthreadAttrPriority.c
+LOCAL_SRC_FILES := changeNice.c
 	
 
 
@@ -111,7 +111,7 @@ LOCAL_C_INCLUDES := \
 	external/fsl_vpu_omx/OpenMAXIL/src/component/vpu_wrapper \
 
 
-LOCAL_MODULE := pthreadAttrPriority
+LOCAL_MODULE := changeNice
 
 LOCAL_MODULE_TAGS := eng
 

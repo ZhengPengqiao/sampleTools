@@ -2,12 +2,15 @@
 CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread
 
-TARGET			:= changePriority  changeThreadPriority pthreads_sched_test pthreadAttrPriority
+TARGET			:= changePriority  changeThreadPriority pthreads_sched_test pthreadAttrPriority changeNice
 
 all:$(TARGET)
 
 # 
 changePriority:changePriority.o
+	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
+
+changeNice:changeNice.o
 	$(CXX) -O3 -o $@ $^ $(LDFLAGS)
 
 changeThreadPriority:changeThreadPriority.o
