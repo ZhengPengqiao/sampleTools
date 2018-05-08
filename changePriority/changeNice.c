@@ -72,31 +72,4 @@ int main(int argc, char **argv)
     
     return 0;
 }
-int main(int argc, char **argv)
-{
-    int ret = 0;
-    
-    if ( checkParam(argc, argv) )
-    {
-        return -1;
-    }
-    //返回值:若成功,返回nice值;若失败,返回-1  
-    ret = getpriority( which, pid);
-    printf("old pid(%d), Nice is %d \n", pid, ret);
-
-    //返回值:0:OK -1:Err  pid可以进程号,也可以是线程号
-    ret = setpriority( PRIO_PROCESS, pid,  nice_val);
-    if( ret == -1 )
-    {
-        perror("setpriority Err:");
-    }
-
-        
-    //返回值:若成功,返回nice值;若失败,返回-1
-    ret = getpriority( which, pid); 
-    printf("new pid(%d), Nice is %d \n", pid, ret);
-    
-    return 0;
-}
-
 

@@ -19,3 +19,4 @@ changePriority
 changeThreadPriority
 pthreads_sched_test
 pthreadAttrPriority
+changeNice
