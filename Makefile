@@ -5,12 +5,13 @@ LDFLAGS			:= -lm -lpthread
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
 				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram sublime-imfix \
-				find-PLL-NMK isErrCount audioEsCali
+				find-PLL-NMK isErrCount audioEsCali mkdirfile
 
 all:$(TARGET)
 
 # 
 checkProgram:checkProgram.o
+mkdirfile:mkdirfile.o
 fock:fock.o
 popenFun:popenFun.o
 systemCmd:systemCmd.o
