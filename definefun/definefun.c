@@ -96,13 +96,13 @@ int checkParam(int argc,char **argv)
 int display_fb_videomode(struct fb_videomode mode)
 {
     printf("{\n");
-    printf("%s, %u, %u, %u, %u,\n", mode.name, mode.refresh, mode.xres, mode.yres, mode.pixclock);
+    printf("\"%s\", %u, %u, %u, %u,\n", mode.name, mode.refresh, mode.xres, mode.yres, mode.pixclock);
     printf("%u, %u,\n", mode.left_margin, mode.right_margin);
     printf("%u, %u,\n",mode.upper_margin, mode.lower_margin);
     printf("%u, %u,\n", mode.hsync_len, mode.vsync_len);
     printf("%u,\n", mode.sync);
     printf("FB_VMODE_NONINTERLACED,\n");
-    printf("FB_MODE_IS_DETAILED},\n");
+    printf("FB_MODE_IS_DETAILED,},\n");
 }
 
 int main(int argc,char **argv)
