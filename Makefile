@@ -32,6 +32,7 @@ showProgress:showProgress.o
 find-PLL-NMK:find-PLL-NMK.o
 isErrCount:isErrCount.o
 audioEsCali:audioEsCali.o
+user_input:user_input.o
 
 #>>>>>>>>>> backtrace
 .PHONY:backtrace_complite
@@ -106,6 +107,7 @@ help:
 	@echo sublime_imfix  : sublime中文支持
 	@echo make-uyvy-data : 根据参数生成yuv原始数据
 	@echo changePriority : 将指定的进程ID的优先级设为最高
+	@echo user_input     : 在用户空间创建虚拟的输入设备
 
 clean:
 	@rm -rf *.o $(TARGET)

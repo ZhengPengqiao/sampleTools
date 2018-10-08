@@ -33,18 +33,4 @@
 *.su
 .tag*
 
-ifTest
-unsig
-mkdirCmd
-funPoint
-BigLittEndian
-ifJudgement
-rmdirCmd
-mod
-ANSICtrl
-showProgress
-mktime_localtime
-chmod
-copyFile
-mkdirfile
-user_input
+lcd-format

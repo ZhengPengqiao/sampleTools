@@ -16,3 +16,5 @@
 *.out
 *.app
 yuyvtorgb565
+*.data
+*.yuyv
