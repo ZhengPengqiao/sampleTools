@@ -5,7 +5,7 @@ LDFLAGS			:= -lm -lpthread
 TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
 				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram sublime-imfix \
-				find-PLL-NMK isErrCount audioEsCali mkdirfile getenv
+				find-PLL-NMK isErrCount audioEsCali mkdirfile getenv string-find
 
 all:$(TARGET)
 
@@ -34,6 +34,8 @@ isErrCount:isErrCount.o
 audioEsCali:audioEsCali.o
 user_input:user_input.o
 getenv:getenv.o
+string-find:string-find.o
+	 $(CXX) -o $@ $^ $(LDFLAGS)
 
 #>>>>>>>>>> backtrace
 .PHONY:backtrace_complite
