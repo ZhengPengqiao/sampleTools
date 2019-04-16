@@ -164,6 +164,7 @@ int mainencode(char *pcm_filename, char *adpcm_filename)
 			*dst++ = state[ch].index & 0x00ff;
 			*dst++ = 0; /* unknown */
 		}
+
 		for (i = 0; i < blocks; i++) {
 			for (ch = 0; ch < channels; ch++) {
 				adpcm_coder(samples + ch, (signed char *)dst, 8, &state[ch], channels);
