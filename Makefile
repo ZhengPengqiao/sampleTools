@@ -2,10 +2,10 @@
 CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread 
 
-TARGET			:= BigLittEndian funPoint mkdirCmd unsig ifTest ifJudgement \
-				rmdirCmd mountCmd mod ANSICtrl showProgress mktime_localtime\
+TARGET			:= BigLittEndian funPoint mkdirCmd  ifJudgement \
+				rmdirCmd mountCmd ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram sublime-imfix \
-				find-PLL-NMK isErrCount audioEsCali mkdirfile getenv string-find
+				find-PLL-NMK  audioEsCali mkdirfile getenv string-find
 
 all:$(TARGET)
 
@@ -22,15 +22,10 @@ ANSICtrl:ANSICtrl.o
 BigLittEndian:BigLittEndian.o
 funPoint:funPoint.o
 mkdirCmd:mkdirCmd.o
-unsig:unsig.o
-ifTest:ifTest.o
 ifJudgement:ifJudgement.o
 rmdirCmd:rmdirCmd.o
-mountCmd:mountCmd.o
-mod:mod.o
 showProgress:showProgress.o
 find-PLL-NMK:find-PLL-NMK.o
-isErrCount:isErrCount.o
 audioEsCali:audioEsCali.o
 user_input:user_input.o
 getenv:getenv.o
