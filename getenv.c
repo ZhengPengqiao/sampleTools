@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+
 char str[1024];
 int main()
 {

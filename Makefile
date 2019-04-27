@@ -2,14 +2,13 @@
 CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread 
 
-TARGET			:= BigLittEndian funPoint mkdirCmd  ifJudgement \
+TARGET			:= BigLittEndian funPoint mkdirCmd \
 				rmdirCmd ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram sublime-imfix \
 				find-PLL-NMK  audioEsCali mkdirfile getenv string-find
 
 all:$(TARGET)
 
-# 
 checkProgram:checkProgram.o
 mkdirfile:mkdirfile.o
 fock:fock.o
@@ -22,7 +21,6 @@ ANSICtrl:ANSICtrl.o
 BigLittEndian:BigLittEndian.o
 funPoint:funPoint.o
 mkdirCmd:mkdirCmd.o
-ifJudgement:ifJudgement.o
 rmdirCmd:rmdirCmd.o
 showProgress:showProgress.o
 find-PLL-NMK:find-PLL-NMK.o
@@ -72,6 +70,15 @@ changePriority_clean:
 	make -C ./changePriority clean
 #<<<<<<<<<<  changePriority
 
+#>>>>>>>>>>  getopt
+.PHONY:getopt_complite
+getopt_complite:
+	make -C ./getopt
+
+.PHONY:getopt_clean
+getopt_clean:
+	make -C ./getopt clean
+#<<<<<<<<<<  getopt
 
 #>>>>>>>>>> sublime-imfix
 sublime-imfix:.PHONY
@@ -93,10 +100,7 @@ help:
 	@echo funPoint       : 函数指针的示例
 	@echo mkdirCmd       : 创建文件夹的示例
 	@echo rmdirCmd       : 删除文件夹的示例
-	@echo unsig          : 无符号数溢出的测试
-	@echo ifTest         : if的整数真假值测试
 	@echo ifJudgement    : if中,赋值后再判断的示例
-	@echo mod            : 正数负数取模之后的结果
 	@echo fock			 : c语言创建进程
 	@echo checkProgram   : c语言检查指定程序是否在运行 
 	@echo isErrCount 	 : 使用位移，处理连续错误的判断
