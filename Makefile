@@ -3,7 +3,7 @@ CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread 
 
 TARGET			:= BigLittEndian funPoint mkdirCmd  ifJudgement \
-				rmdirCmd mountCmd ANSICtrl showProgress mktime_localtime\
+				rmdirCmd ANSICtrl showProgress mktime_localtime\
 				copyFile chmod systemCmd popenFun checkProgram sublime-imfix \
 				find-PLL-NMK  audioEsCali mkdirfile getenv string-find
 
