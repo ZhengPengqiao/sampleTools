@@ -2,7 +2,8 @@
 CFLAGS			:= -Wall
 LDFLAGS			:= -lm -lpthread
 
-TARGET			:= changePriority  changeThreadPriority pthreads_sched_test pthreadAttrPriority changeNice
+TARGET			:= changePriority  changeThreadPriority pthreads_sched_test pthreadAttrPriority changeNice \
+
 
 all:$(TARGET)
 
