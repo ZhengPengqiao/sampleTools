@@ -1,4 +1,14 @@
-/* pthreads_sched_test.c */
+/**
+ * @file pthreadAttrPriority.c
+ * @author ZhengPengqiao (157510312@qq.com)
+ * @brief 配置线程属性, 然后使用这个属性来创建线程
+ * @version 0.1
+ * @date 2019-08-02
+ * 
+ * @copyright Copyright (c) 2019
+ * 
+ */
+
 #include    <stdio.h>  
 #include    <stdlib.h>  
 #include    <unistd.h>  

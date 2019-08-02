@@ -17,12 +17,10 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libpng \
 	libz \
-	libg2d \
 	libbinder \
 	libmedia \
 	libstagefright \
-	libstagefright_foundation \
-	lib_vpu_wrapper
+	libstagefright_foundation
 
 LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
@@ -57,12 +55,10 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libpng \
 	libz \
-	libg2d \
 	libbinder \
 	libmedia \
 	libstagefright \
-	libstagefright_foundation \
-	lib_vpu_wrapper
+	libstagefright_foundation
 
 LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
@@ -96,12 +92,10 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libpng \
 	libz \
-	libg2d \
 	libbinder \
 	libmedia \
 	libstagefright \
-	libstagefright_foundation \
-	lib_vpu_wrapper
+	libstagefright_foundation
 
 LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
