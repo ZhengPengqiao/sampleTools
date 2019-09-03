@@ -125,13 +125,6 @@ int main(int argc, char **argv)
   }
 
 
-  if(policy == SCHED_OTHER)
-  {
-      printf("SCHED_OTHER is not need\n");
-      exit(1);
-  }
-
-
   printf("try to set pid(%d)'s priority is %d \n", pid, pri_val); 
   maxpri = sched_get_priority_max(policy);
   if(maxpri == -1)
