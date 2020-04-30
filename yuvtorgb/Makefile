@@ -5,9 +5,9 @@ CFLAGS	+=
 LDFLAGS	+=
 LDFLAGS	+=
 
-TARGET			:= yuyvtorgb565
+TARGET			:= yuvtorgb
 
-OBJS = yuyvtorgb565.c
+OBJS = yuvtorgb.c
 
 all:$(TARGET)
 
